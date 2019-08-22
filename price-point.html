@@ -10,7 +10,14 @@
 
     @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap");
 
-    body {background-color: #F9F9F9;}
+    @font-face {
+        font-family: 'Emoji Symbols';
+        font-style: normal;
+        font-weight: 400;
+        src: local('emoji-symbols'), url(emoji-symbols.woff) format('woff');
+    }
+
+    body {background-color: #F9F9F9; color: #666666;}
     body, table, td, a{-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family: 'Source Sans Pro';} /* Prevent WebKit and Windows mobile changing default text sizes */
     table, td{mso-table-lspace: 0pt; mso-table-rspace: 0pt;} /* Remove spacing between tables in Outlook 2007 and up */
     img{-ms-interpolation-mode: bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
@@ -30,13 +37,17 @@
         line-height: inherit !important;
     }
 
+    .mobile-button:hover {
+        opacity: .7;
+    }
+
     /* MOBILE STYLES */
-    @media screen and (max-width: 525px) {
+    @media screen and (max-width: 600px) {
 
         /* ALLOWS FOR FLUID TABLES */
         .wrapper {
           width: 100% !important;
-        	max-width: 100% !important;
+          max-width: 100% !important;
         }
 
         /* ADJUSTS LAYOUT OF LOGO IMAGE */
@@ -71,7 +82,7 @@
         }
 
         .padding-copy {
-     		padding: 10px 5% 10px 5% !important;
+     	  padding: 10px 5% 10px 5% !important;
           text-align: center;
         }
 
@@ -80,25 +91,33 @@
         }
 
         .section-padding {
-          padding: 50px 15px 50px 15px !important;
+          padding: 30px 5px 30px 1px !important;
         }
 
-        /* ADJUST BUTTONS ON MOBILE */
-        .mobile-button-container {
-            margin: 0 auto;
-            width: 100% !important;
-        }
+        /* MOBILE PRICE POINTS */
 
-        .mobile-button {
-            padding: 15px !important;
-            border: 0 !important;
-            font-size: 16px !important;
+        .price-point .flight-details,
+        .price-point .price-details {
             display: block !important;
+            width: 100% !important;
+            align: center !important;
         }
 
-        .mobile-button:hover {
-            opacity: .5;
+        .price-point .price-details {
+            margin-top: -20px;
+            text-align: left !important;
+            float: none !important;
         }
+
+        .why-book {
+            padding: 20px 0;
+        }
+
+        .why-book .avatar {
+            width: 85px !important;
+            padding-right: 10px !important;
+        }
+
 
     }
 
@@ -114,11 +133,6 @@
 <![endif]-->
 </head>
 <body style="margin: 0 !important; padding: 0 !important;">
-
-<!-- HIDDEN PREHEADER TEXT -->
-<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Source Sans Pro', Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-    Entice the open with some amazing preheader text. Use a little mystery and get those subscribers to read through...
-</div>
 
 <!-- HEADER -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -137,10 +151,10 @@
                         </a>
                     </td>
                     <td valign="middle" style="padding: 20px 0;" align="right">
-                        <span style="padding: 0 15px; color: #F26132; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 600;">Flights</span>
-                        <span style="padding: 0 15px; color: #F26132; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 600;">Hotels</span>
-                        <span style="padding: 0 15px; color: #F26132; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 600;">Cars</span>
-                        <span style="padding: 0 15px; color: #F26132; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 600;">Insurance</span>
+                        <span style="padding: 0 12px; color: #F26132; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 600;"><span class="mobile-hide" style="font-family: 'Emoji Symbols'; color: #2083fe;">&#x2714;&nbsp;</span>Flights</span>
+                        <span style="padding: 0 12px; color: #F26132; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 600;"><span class="mobile-hide" style="font-family: 'Emoji Symbols'; color: #2083fe;">&#x2714;&nbsp;</span> Hotels</span>
+                        <span style="padding: 0 12px; color: #F26132; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 600;"><span class="mobile-hide" style="font-family: 'Emoji Symbols'; color: #2083fe;">&#x2714;&nbsp;</span>Cars</span>
+                        <span style="padding: 0 12px; color: #F26132; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: 600;"><span class="mobile-hide" style="font-family: 'Emoji Symbols'; color: #2083fe;">&#x2714;&nbsp;</span>Insurance</span>
                     </td>
                 </tr>
             </table>
@@ -151,8 +165,12 @@
             <![endif]-->
         </td>
     </tr>
+</table>
+
+<!-- HERO BANNER -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td bgcolor="#F26132" align="center" style="padding: 70px 15px 70px 15px;" class="section-padding">
+        <td bgcolor="#F26132" align="center" style="padding: 40px 15px 40px 15px;" class="section-padding">
             <!--[if (gte mso 9)|(IE)]>
             <table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
             <tr>
@@ -165,7 +183,7 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                               	<td align="center" class="padding">
-                                  <a href="http://litmus.com" target="_blank"><img src="product-1.png" width="500" height="300" border="0" alt="Insert alt text here" style="display: block; padding: 0; color: #266e9c; text-decoration: none; font-family: 'Source Sans Pro', Arial, sans-serif; font-size: 16px;" class="img-max"></a>
+                                  <img src="hero.png" width="100%" border="0" alt="40 Hour Airline Sale" style="display: block; padding: 0; color: #266e9c; text-decoration: none; font-family: 'Source Sans Pro', Arial, sans-serif; font-size: 16px;" class="img-max">
                               </td>
                             </tr>
                             <tr>
@@ -173,7 +191,7 @@
                                     <!-- COPY -->
                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                         <tr>
-                                            <td align="center" style="font-size: 18px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #ffffff; padding-top: 15px;" class="padding-copy">Lorem ipsum dolor sit amet</td>
+                                            <td align="center" style="font-size: 18px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #ffffff; padding-top: 15px;" class="padding-copy">Get ready to fly around Australia with top deals from Virgin Australia. Offer ends Mon Apr 1 2019.</td>
                                         </tr>
                                     </table>
                                 </td>
@@ -189,17 +207,54 @@
             <![endif]-->
         </td>
     </tr>
+</table>
+
+<!-- HERO BANNER (WITH IMAGE) -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="padding">
     <tr>
-        <td align="center" style="padding: 70px 15px 25px 15px;" class="section-padding">
+        <td align="center" style="padding: 80px 15px 80px 15px; background-size: cover; background-position: center center; background-color: #F26132" class="section-padding" background="https://images.unsplash.com/photo-1445217143695-467124038776?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80">
+            <!--[if (gte mso 9)|(IE)]>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+            <tr>
+            <td align="center" valign="top" width="800">
+            <![endif]-->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px; color: #ffffff;">
+                <tr>
+                    <td>
+                        <!-- HERO COPY -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="40" style="border: 2px #ffffff solid; background-color: rgba(247,97,50,.8);">
+                            <tr>
+                                <td align="center">
+                                    <h1 style="font-size: 38px; margin-bottom: 0;">North America</h1>
+                                    <h3 style="font-weight: 500;">Sale on now</h3>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </td>
+    </tr>
+</table>
+
+<!--MAIN CONTENT-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td align="center" style="padding: 50px 10px 25px 10px;" class="section-padding">
             <table border="0" cellpadding="0" cellspacing="0" width="800" style="padding: 0 0 20px 0;" class="responsive-table">
                 <tr>
-                    <td align="center" height="100%" valign="top" width="100%" style="padding-bottom: 35px;">
+                    <td align="center" height="100%" valign="top" width="100%">
                         <!--[if (gte mso 9)|(IE)]>
                         <table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
                         <tr>
-                        <td align="center" valign="top" width="500">
+                        <td align="center" valign="top" width="800">
                         <![endif]-->
-                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:500;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                                 <td align="center" valign="top" style="font-size:0;">
 
@@ -209,56 +264,74 @@
                                             <tr>
                                                 <td>
                                                     <!-- PRICE POINT -->
-                                                    <table border="0" cellspacing="0" cellpadding="20" class="responsive-table" width="100%" style="background-color: #ffffff; padding: 20px; border: 1px #efefef solid; margin-bottom: 4px;" bgcolor="#ffffff;">
+                                                    <table border="0" cellspacing="0" cellpadding="0" class="price-point responsive-table" width="100%" style="background-color: #ffffff; border: 1px #efefef solid; margin-bottom: 2px;" bgcolor="#ffffff;">
                                                         <tr>
-                                                            <td align="left" valign="middle" width="45"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="40" height="40" alt="" /></td>
-                                                            <td align="left" valign="middle" width="40%" style="padding: 0 0 5px 0; font-size: 16px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: normal; line-height: 22px; color: #232323;"><strong>Return flights to Sydney</strong><br>Fly with Virgin Australia</td>
-                                                            <td align="right" valign="middle" style="padding: 20px 12px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                            <td align="right" valign="middle" style="padding: 20px 12px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Premium</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                            <td align="right" valign="middle" style="padding: 20px 12px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                            <td align="right" style="padding-top: 25px;">
-                                                                <table border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
+                                                            <td style="text-align: left;" class="flight-details" style="width: 40%">
+                                                                <table cellpadding="20" cellspacing="0" style="width: 100%">
                                                                     <tr>
-                                                                        <td align="center" style="color: #2083F;" bgcolor="#ffffff"><a href="#" target="_blank" style="font-size: 14px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 22px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">Book now</a></td>
+                                                                        <td align="left" valign="middle" width="45"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="40" height="40" alt="" /></td>
+                                                                        <td align="left" valign="middle" style="padding: 0 0 5px 0; font-size: 16px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: normal; line-height: 22px; color: #232323;"><strong>Return flights to Sydney</strong><br>Fly with Virgin Australia</td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
-                                                        </tr>
-                                                    </table>
-                                                     <!-- PRICE POINT -->
-                                                     <table border="0" cellspacing="0" cellpadding="20" class="responsive-table" width="100%" style="background-color: #ffffff; padding: 20px; border: 1px #efefef solid; margin-bottom: 4px;" bgcolor="#ffffff;">
-                                                        <tr>
-                                                            <td align="left" valign="middle" width="45"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="40" height="40" alt="" /></td>
-                                                            <td align="left" valign="middle" width="40%" style="padding: 0 0 5px 0; font-size: 16px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: normal; line-height: 22px; color: #232323;"><strong>Return flights to Melbourne</strong><br>Fly with Virgin Australia</td>
-                                                            <td align="right" valign="middle" style="padding: 20px 12px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                            <td align="right" valign="middle" style="padding: 20px 12px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Premium</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                            <td align="right" valign="middle" style="padding: 20px 10px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                            <td align="right" style="padding-top: 25px;">
-                                                                <table border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
+                                                            <td style="text-align: right; float: right;" class="price-details">
+                                                                <table cellpadding="25" cellspacing="0" style="width: 100%">
                                                                     <tr>
-                                                                        <td align="center" style="color: #2083F;" bgcolor="#ffffff"><a href="#" target="_blank" style="font-size: 14px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 22px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">Book now</a></td>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 85px; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>Save $70</td>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 0; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Premium</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$678</strong><br>Save $70</td>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 0; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$1278</strong><br>Save $70</td>
+                                                                        <td style="text-align: right;" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="font-size: 14px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">Book&nbsp;now</a></td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                         </tr>
                                                     </table>
                                                     <!-- PRICE POINT -->
-                                                    <table border="0" cellspacing="0" cellpadding="20" class="responsive-table" width="100%" style="background-color: #ffffff; padding: 20px; border: 1px #efefef solid; margin-bottom: 4px;" bgcolor="#ffffff;">
-                                                            <tr>
-                                                                <td align="left" valign="middle" width="45"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="40" height="40" alt="" /></td>
-                                                                <td align="left" valign="middle" width="40%" style="padding: 0 0 5px 0; font-size: 16px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: normal; line-height: 22px; color: #232323;"><strong>Return flights to Sydney</strong><br>Fly with Virgin Australia</td>
-                                                                <td align="right" valign="middle" style="padding: 20px 12px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                                <td align="right" valign="middle" style="padding: 20px 12px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Premium</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                                <td align="right" valign="middle" style="padding: 20px 12px 20px 0; font-size: 12px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>You save $70</td>
-                                                                <td align="right" style="padding-top: 25px;">
-                                                                    <table border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
-                                                                        <tr>
-                                                                            <td align="center" style="color: #2083F;" bgcolor="#ffffff"><a href="#" target="_blank" style="font-size: 14px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 22px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">Book now</a></td>
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
+                                                    <table border="0" cellspacing="0" cellpadding="0" class="price-point responsive-table" width="100%" style="background-color: #ffffff; border: 1px #efefef solid; margin-bottom: 2px;" bgcolor="#ffffff;">
+                                                        <tr>
+                                                            <td style="text-align: left;" class="flight-details" style="width: 40%">
+                                                                <table cellpadding="20" cellspacing="0" style="width: 100%">
+                                                                    <tr>
+                                                                        <td align="left" valign="middle" width="45"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="40" height="40" alt="" /></td>
+                                                                        <td align="left" valign="middle" style="padding: 0 0 5px 0; font-size: 16px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: normal; line-height: 22px; color: #232323;"><strong>Return flights to Sydney</strong><br>Fly with Virgin Australia</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td style="text-align: right; float: right;" class="price-details">
+                                                                <table cellpadding="25" cellspacing="0" style="width: 100%">
+                                                                    <tr>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 85px; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>Save $70</td>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 0; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Premium</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$678</strong><br>Save $70</td>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 0; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$1278</strong><br>Save $70</td>
+                                                                        <td align="right" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="font-size: 14px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">Book&nbsp;now</a></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- PRICE POINT -->
+                                                    <table border="0" cellspacing="0" cellpadding="0" class="price-point responsive-table" width="100%" style="background-color: #ffffff; border: 1px #efefef solid; margin-bottom: 2px;" bgcolor="#ffffff;">
+                                                        <tr>
+                                                            <td style="text-align: left;" class="flight-details" style="width: 40%">
+                                                                <table cellpadding="20" cellspacing="0" style="width: 100%">
+                                                                    <tr>
+                                                                        <td align="left" valign="middle" width="45"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="40" height="40" alt="" /></td>
+                                                                        <td align="left" valign="middle" style="padding: 0 0 5px 0; font-size: 16px; font-family: 'Source Sans Pro', Arial, sans-serif; font-weight: normal; line-height: 22px; color: #232323;"><strong>Return flights to Sydney</strong><br>Fly with Virgin Australia</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td style="text-align: right; float: right;" class="price-details">
+                                                                <table cellpadding="25" cellspacing="0" style="width: 100%">
+                                                                    <tr>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 85px; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$378</strong><br>Save $70</td>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 0; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Premium</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$678</strong><br>Save $70</td>
+                                                                        <td align="right" valign="middle" style="padding: 0px 20px 0px 0; font-size: 12px; text-align: left; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="font-size: 26px; font-weight: 600; color: #2083FE">$1278</strong><br>Save $70</td>
+                                                                        <td align="right" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="font-size: 14px; font-family: 'Source Sans Pro', Arial, sans-serif; color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">Book&nbsp;now</a></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                         </table>
@@ -281,22 +354,57 @@
             </table>
         </td>
     </tr>
+</table>
+
+<!-- WHY BOOK WITH US -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td align="center" style="padding: 40px 0px;">
+        <td align="center">
+            <table width="100%" border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="0 " align="center" style="border: 1px #efefef solid; max-width: 800px;" class="why-book">
+                <tr>
+                    <td align="left" style="padding-left: 30px; font-size: 14px; line-height: 25px; font-family: 'Source Sans Pro', Arial, sans-serif;">
+                        <h2 style="padding-top: 10px;  font-weight: 560; color: #F26132; font-size: 20px;">Why book your next trip with Aunt Betty</h2>
+                        <ul style="list-style-type: none; padding: 0 0 10px 5px;">
+                            <li><span style="font-family: 'Emoji Symbols';">&#x2714;&nbsp;</span>Best prices from all major airlines around the world</li>
+                            <li><span style="font-family: 'Emoji Symbols';">&#x2714;&nbsp;</span>Hundreds of thousands of customers per year</li>
+                            <li><span style="font-family: 'Emoji Symbols';">&#x2714;&nbsp;</span>Dedicated 24 / 7 customer support team</li>
+                            <li><span style="font-family: 'Emoji Symbols';">&#x2714;&nbsp;</span>A part of Flight Centre Travel Group</li>
+                        </ul>
+                    </td>
+                    <td align="right" valign="bottom">
+                        <img src="ab-avatar.png" class="avatar" alt="" style="width: 150px; padding: 10px 40px 0 0; vertical-align: bottom" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- FOOTER -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td align="center" style="padding: 20px 0px;">
             <!--[if (gte mso 9)|(IE)]>
             <table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
             <tr>
             <td align="center" valign="top" width="800">
             <![endif]-->
             <!-- UNSUBSCRIBE COPY -->
-            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 800px;" class="responsive-table">
+            <table width="100%" border="0" cellspacing="0" cellpadding="10" align="center" style="max-width: 800px;" class="responsive-table">
                 <tr>
-                    <td align="center" style="font-size: 12px; line-height: 18px; font-family: 'Source Sans Pro', Arial, sans-serif; color:#666666;">
-                        1234 Main Street, Anywhere, MA 01234, USA
-                        <br>
-                        <a href="http://litmus.com" target="_blank" style="color: #666666; text-decoration: none;">Unsubscribe</a>
-                        <span style="font-family: Arial, sans-serif; font-size: 12px; color: #444444;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                        <a href="http://litmus.com" target="_blank" style="color: #666666; text-decoration: none;">View this email in your browser</a>
+                    <td align="left" style="width: 60%; text-align: left; font-size: 13px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color:#666666;">
+                        <p>&copy; Flight Centre Travel Group Limited trading as Aunt Betty&nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="#" style="color: #2083fe;">Contact&nbsp;us</a><br>
+                        ABN&nbsp;25 003 377 188 - ACN&nbsp;003 377 188 ATAS&nbsp;-&nbsp;Travel&nbsp;Accredited&nbsp;No.&nbsp;A10412</p>
+                        <p><a href="http://litmus.com" target="_blank" style="color: #666666;">Unsubscribe</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                        <a href="http://litmus.com" target="_blank" style="color: #666666;">Preferences</a></p>
+                    </td>
+                    <td align="right" style="width: 40%; font-size: 13px; line-height: 20px; font-family: 'Source Sans Pro', Arial, sans-serif; color:#666666;">
+                        <div style="text-align: right">
+                            <a href="https://www.facebook.com/Aunt-Betty-160977227584593/" target="_blank"><img src="fb.png" style="padding: 0 7px; height: 25px !important" height="25" alt="FB" title="Like us on Facebook" /></a>
+                            <a href="https://instagram.com/aunt_betty_travel" target="_blank"><img src="ig.png" style="padding: 0 7px; height: 25px !important" height="25" alt="IG" title="Follow us on Instagram" /></a>
+                            <a href="https://twitter.com/auntbettytravel?lang=en" target="_blank"><img src="tw.png" style="padding: 0 7px; height: 25px !important" height="25" alt="TW" title="Follow us on Twitter" /></a>
+                            <a href="https://www.youtube.com/channel/UCIpV4WDgHitVs80P7ehN4Dw" target="_blank"><img src="yt.png" style="padding: 0 7px; height: 25px !important" height="25" alt="YT" title="Check us out on Youtube" /></a>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -308,5 +416,6 @@
         </td>
     </tr>
 </table>
+
 </body>
 </html>
