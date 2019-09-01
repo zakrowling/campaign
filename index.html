@@ -10,7 +10,7 @@
 
     @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap");
 
-    body {background-color: #F9F9F9; color: #666666; font-size: 14px;}
+    body {background-color: #F9F9F9; color: #666666; font-size: 14px; font-weight: 400;}
     body, table, td, a {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif;}
     table, td {mso-table-lspace: 0pt; mso-table-rspace: 0pt;}
     img {-ms-interpolation-mode: bicubic;}
@@ -19,6 +19,7 @@
     img {border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none;}
     table {border-collapse: collapse !important;}
     body {height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important;}
+    p {font-weight: 400;}
     p a:hover {text-decoration: underline; !important}
 
     /* iOS BLUE LINKS */
@@ -47,7 +48,7 @@
     @media screen and (max-width: 600px) {
 
         body {
-            font-size: .8rem !important;
+            font-size: .7rem !important;
         }
 
         /* ALLOWS FOR FLUID TABLES */
@@ -64,6 +65,8 @@
         /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
         .mobile-hide {
           display: none !important;
+          opacity: 0 !important;
+          visibility: hidden !important;
         }
 
         .img-max {
@@ -122,6 +125,10 @@
         .hero-banner .hero-avatar {
             display: block !important;
             width: 100% !important;
+            text-align: center !important;
+        }
+
+        .hero-banner .hero-avatar div {
             text-align: center !important;
         }
 
@@ -248,21 +255,21 @@
             <!-- HERO IMAGE -->
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px; color: #ffffff;" class="responsive-table">
                 <tr>
-                    <td class="hero-content" style="width: 60%;">
+                    <th class="hero-content" style="width: 60%;">
                         <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
                             <tr>
                                 <td>
-                                    <div style="padding: 10px 0 20px 0;">
+                                    <div style="padding: 10px 0 20px 0; text-align: left;">
                                         <h2 style="margin: 14px 0 8px; font-size: 1.8rem; line-height: 1.75rem;">The countdown is on!</h2>
                                         <h4 style="margin: 8px 0; font-size: 1.3rem; font-weight: 500;">Start packing for your trip to Sydney, Australia</h4>
-                                        <p>Don't miss out on these amazing travel deals.</p>
+                                        <p style="font-size: 1.1rem;">Don't miss out on these amazing travel deals.</p>
                                         <p><a href="#" target="_blank" style="margin-top: 15px; font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; background-color: #2083fe; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">Start my search again</a></p>
                                     </div>
                                 </td>
                             </tr>
                         </table>
-                    </td>
-                    <td valign="bottom" class="hero-avatar" style="width: 40%;">
+                    </th>
+                    <th valign="bottom" class="hero-avatar" style="width: 40%;">
                         <table border="0" cellspacing="0" cellpadding="0">
                             <tr>
                                 <td align="center">
@@ -270,7 +277,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </td>
+                    </th>
                 </tr>
             </table>
         </td>
@@ -510,34 +517,34 @@
         <td align="center">
             <table width="100%" border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="0" align="center" style="max-width: 800px; margin: 40px 0;">
                 <tr>
-                    <td align="left" valign="middle" style="width: 240px; border-bottom: 1px #efefef solid;">
+                    <th align="left" valign="middle" style="width: 240px; border-bottom: 1px #efefef solid;">
                         <a href="#"><img src="https://images.unsplash.com/photo-1512821231209-3cd3e4df62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9crop=faces&fit=crop&h&auto=format&fit=&w=400&q=100" width="220" alt="" class="align-bottom" /></a>
-                    </td>
-                    <td align="left" valign="middle" style="padding: 20px 12px; border-bottom: 1px #efefef solid;">
+                    </th>
+                    <th align="left" valign="middle" style="padding: 20px 12px; border-bottom: 1px #efefef solid;">
                         <h5 style="margin: 0 0 8px 0; color:#232323; font-size: .85rem; font-weight: 400; line-height: 1.2rem; text-transform: uppercase;">Europe &bull; 2 min read</h5>
                         <a href="#" target="_blank" class="text-link" style="text-decoration: none; margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.2rem; color: #2083fe;">Discover Amsterdam, Netherlands in three days</a>
-                        <p style="font-size: 1rem; margin-bottom: 0;">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-                    </td>
+                        <p style="font-size: 1rem; margin-bottom: 0; font-weight: 400;">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                    </th>
                 </tr>
                 <tr>
-                    <td align="left" valign="middle" style="width: 240px; border-bottom: 1px #efefef solid;">
+                    <th align="left" valign="middle" style="width: 240px; border-bottom: 1px #efefef solid;">
                         <a href="#"><img src="https://images.unsplash.com/photo-1512821231209-3cd3e4df62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9crop=faces&fit=crop&h&auto=format&fit=&w=400&q=100" width="220" alt="" class="align-bottom" /></a>
-                    </td>
-                    <td align="left" valign="middle" style="padding: 20px 12px; border-bottom: 1px #efefef solid;">
+                    </th>
+                    <th align="left" valign="middle" style="padding: 20px 12px; border-bottom: 1px #efefef solid;">
                         <h5 style="margin: 0 0 8px 0; color:#232323; font-size: .85rem; font-weight: 400; line-height: 1.2rem; text-transform: uppercase;">Europe &bull; 2 min read</h5>
                         <a href="#" target="_blank" class="text-link" style="text-decoration: none; margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.2rem; color: #2083fe;">Discover Amsterdam, Netherlands in three days</a>
-                        <p style="font-size: 1rem; margin-bottom: 0;">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-                    </td>
+                        <p style="font-size: 1rem; margin-bottom: 0; font-weight: 400;">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                    </tdh>
                 </tr>
                 <tr>
-                    <td align="left" valign="middle" style="width: 240px; border-bottom: 1px #efefef solid;">
+                    <th align="left" valign="middle" style="width: 240px; border-bottom: 1px #efefef solid;">
                         <a href="#"><img src="https://images.unsplash.com/photo-1512821231209-3cd3e4df62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9crop=faces&fit=crop&h&auto=format&fit=&w=400&q=100" width="220" alt="" class="align-bottom" /></a>
-                    </td>
-                    <td align="left" valign="middle" style="padding: 20px 12px; border-bottom: 1px #efefef solid;">
+                    </th>
+                    <th align="left" valign="middle" style="padding: 20px 12px; border-bottom: 1px #efefef solid;">
                         <h5 style="margin: 0 0 8px 0; color:#232323; font-size: .85rem; font-weight: 400; line-height: 1.2rem; text-transform: uppercase;">Europe &bull; 2 min read</h5>
                         <a href="#" target="_blank" class="text-link" style="text-decoration: none; margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.2rem; color: #2083fe;">Discover Amsterdam, Netherlands in three days</a>
-                        <p style="font-size: 1rem; margin-bottom: 0;">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-                    </td>
+                        <p style="font-size: 1rem; margin-bottom: 0; font-weight: 400;">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
+                    </th>
                 </tr>
             </table>
         </td>
