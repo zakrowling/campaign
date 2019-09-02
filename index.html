@@ -44,8 +44,12 @@
         text-decoration: underline !important;
     }
 
+</style>
+
+<style type="text/css">
+
     /* MOBILE STYLES */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
 
         body {
             font-size: .7rem !important;
@@ -60,6 +64,7 @@
         /* ADJUSTS LAYOUT OF LOGO IMAGE */
         .logo img {
           margin: 0 auto !important;
+          width: 80px !important;
         }
 
         /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
@@ -104,12 +109,14 @@
         }
 
         /* MOBILE PRICE POINTS */
-
         .price-point .flight-details,
         .price-point .price-details,
+        .responsive-content tr th,
         .responsive-content tr td {
             display: block !important;
-            width: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            direction: ltr !important;
             border: none !important;
         }
 
@@ -125,10 +132,12 @@
         .hero-banner .hero-avatar {
             display: block !important;
             width: 100% !important;
+            max-width: 100% !important;
+            direction: ltr !important;
             text-align: center !important;
         }
 
-        .hero-banner .hero-avatar div {
+        .hero-banner .hero-copy {
             text-align: center !important;
         }
 
@@ -168,7 +177,7 @@
 <!-- HEADER -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
-        <td width="100%" style="text-align: center; font-size: .75rem; padding: 10px 0; background: #ffffff; border-bottom: 1px #efefef solid;">Having trouble viewing this email? <a href="#" style="color: #2083fe;">View it in a browser</a></td>
+        <td width="100%" style="text-align: center; font-size: .75rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; padding: 10px 0; background: #ffffff; border-bottom: 1px #efefef solid;">Having trouble viewing this email? <a href="#" style="color: #2083fe;">View it in a browser</a></td>
     </tr>
     <tr>
         <td bgcolor="#ffffff">
@@ -176,7 +185,7 @@
                 <tr>
                     <td valign="top" style="padding: 20px 0 20px 10px;" class="logo">
                         <a href="http://www.auntbetty.com" target="_blank">
-                            <img alt="Logo" title="Aunt Betty" src="https://booking.auntbetty.com.au/content/aby/logo/header-logo.png" width="100" height="33" style="display: block; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #ffffff; font-size: 1.1em;" border="0">
+                            <img alt="Logo" title="Aunt Betty" src="https://booking.auntbetty.com.au/content/aby/logo/header-logo.png" style="display: block; width: 100px; max-width: 100px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #ffffff; font-size: 1.1em;" border="0">
                         </a>
                     </td>
                     <td valign="middle" style="padding: 20px 0;" align="right">
@@ -233,7 +242,7 @@
                         <!-- HERO COPY -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="30" background="https://rawcdn.githack.com/zakrowling/campaign/2de88ecd329803b30fffad833619155d40a87508/orange-transparent.png" style="border: 2px #ffffff solid; border-radius: 3px; background-repeat: repeat; background-image url(https://rawcdn.githack.com/zakrowling/campaign/2de88ecd329803b30fffad833619155d40a87508/orange-transparent.png);">
                             <tr>
-                                <td align="center">
+                                <td align="center" style="font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #fff;">
                                     <h1 style="font-size: 45px; margin-bottom: 0;">🇺🇸🇨🇦🇲🇽</h1>
                                     <h1 style="font-size: 36px; margin: 0;">North America</h1>
                                     <h3 style="font-weight: 500; margin-top: 0; margin-bottom: 40px;">Sale on now</h3>
@@ -258,23 +267,23 @@
                     <th class="hero-content" style="width: 60%;">
                         <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
                             <tr>
-                                <td>
-                                    <div style="padding: 10px 0 20px 0; text-align: left;">
+                                <th>
+                                    <div class="hero-copy" style="padding: 10px 0 20px 0; color: #fff; text-align: left; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif;">
                                         <h2 style="margin: 14px 0 8px; font-size: 1.8rem; line-height: 1.75rem;">The countdown is on!</h2>
                                         <h4 style="margin: 8px 0; font-size: 1.3rem; font-weight: 500;">Start packing for your trip to Sydney, Australia</h4>
                                         <p style="font-size: 1.1rem;">Don't miss out on these amazing travel deals.</p>
                                         <p><a href="#" target="_blank" style="margin-top: 15px; font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; background-color: #2083fe; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">Start my search again</a></p>
                                     </div>
-                                </td>
+                                </th>
                             </tr>
                         </table>
                     </th>
                     <th valign="bottom" class="hero-avatar" style="width: 40%;">
                         <table border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <td align="center">
+                                <th align="center">
                                     <img src="https://rawcdn.githack.com/zakrowling/campaign/12d4489697d1c1a37099855c776512c44e66fb60/ab-large-avatar.png" class="avatar" alt="" style="width: 100%; padding: 20px 40px 0 20px; vertical-align: bottom" />
-                                </td>
+                                </th>
                             </tr>
                         </table>
                     </th>
@@ -307,14 +316,14 @@
                                                                 <table cellpadding="10" cellspacing="0" style="width: 100%">
                                                                     <tr>
                                                                         <td align="left" valign="middle" width="40"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="38" height="38" alt="" /></td>
-                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 1.4rem; color: #232323;"><strong style="display: inline-block; line-height: 1.2rem;">Economy return to Sydney</strong><br>Fly with Virgin Australia</td>
+                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 120%; color: #232323;"><strong style="display: inline-block; line-height: 110%;">Economy return to Sydney</strong><br>Fly with Virgin Australia</td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                             <td style="text-align: right;" class="price-details">
                                                                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                                                                     <tr>
-                                                                        <td align="left" valign="middle" style="padding: 6px 0 0px 70px; font-size: .75rem; text-align: left; line-height: 21px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$378*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" style="padding: 6px 4px 0px 70px; font-size: .75rem; text-align: left; line-height: 140%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$378*</strong><br>Save $70</td>
                                                                         <td style="text-align: right;" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="margin-right: 15px; font-size: .85rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; background-color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">View&nbsp;flights</a></td>
                                                                     </tr>
                                                                 </table>
@@ -328,14 +337,14 @@
                                                                 <table cellpadding="10" cellspacing="0" style="width: 100%">
                                                                     <tr>
                                                                         <td align="left" valign="middle" width="40"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="38" height="38" alt="" /></td>
-                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 1.4rem; color: #232323;"><strong style="display: inline-block; line-height: 1.2rem;">Economy return to Melbourne</strong><br>Fly with Virgin Australia</td>
+                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 120%; color: #232323;"><strong style="display: inline-block; line-height: 110%;">Economy return to Sydney</strong><br>Fly with Virgin Australia</td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                             <td style="text-align: right;" class="price-details">
                                                                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                                                                     <tr>
-                                                                        <td align="left" valign="middle" style="padding: 6px 0 0px 70px; font-size: .75rem; text-align: left; line-height: 21px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$378*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" style="padding: 6px 4px 0px 70px; font-size: .75rem; text-align: left; line-height: 140%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$378*</strong><br>Save $70</td>
                                                                         <td style="text-align: right;" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="margin-right: 15px; font-size: .85rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; background-color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">View&nbsp;flights</a></td>
                                                                     </tr>
                                                                 </table>
@@ -349,14 +358,14 @@
                                                                 <table cellpadding="10" cellspacing="0" style="width: 100%">
                                                                     <tr>
                                                                         <td align="left" valign="middle" width="40"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="38" height="38" alt="" /></td>
-                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 1.4rem; color: #232323;"><strong style="display: inline-block; line-height: 1.2rem;">Economy return to Woolloomooloo</strong><br>Fly with Virgin Australia</td>
+                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 120%; color: #232323;"><strong style="display: inline-block; line-height: 110%;">Economy return to Sydney</strong><br>Fly with Virgin Australia</td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                             <td style="text-align: right;" class="price-details">
                                                                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                                                                     <tr>
-                                                                        <td align="left" valign="middle" style="padding: 6px 0 0px 70px; font-size: .75rem; text-align: left; line-height: 21px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$378*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" style="padding: 6px 4px 0px 70px; font-size: .75rem; text-align: left; line-height: 140%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$378*</strong><br>Save $70</td>
                                                                         <td style="text-align: right;" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="margin-right: 15px; font-size: .85rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; background-color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">View&nbsp;flights</a></td>
                                                                     </tr>
                                                                 </table>
@@ -395,22 +404,22 @@
                                         <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 650px;" class="wrapper">
                                             <tr>
                                                 <td>
-                                                    <!-- PRICE POINT -->
-                                                    <table border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="10" class="price-point responsive-table" width="100%" style="background-color: #ffffff; border: 1px #efefef solid; margin-bottom: 2px;" bgcolor="#ffffff;">
+                                                   <!-- PRICE POINT -->
+                                                   <table border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="10" class="price-point responsive-table" width="100%" style="background-color: #ffffff; border: 1px #efefef solid; margin-bottom: 2px;" bgcolor="#ffffff;">
                                                         <tr>
                                                             <td style="width: 55%;" class="flight-details">
                                                                 <table cellpadding="10" cellspacing="0" style="width: 100%">
                                                                     <tr>
                                                                         <td align="left" valign="middle" width="40"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="38" height="38" alt="" /></td>
-                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; line-height: 1.4rem; color: #232323;"><strong style="display: inline-block; line-height: 1.2rem;">Return flights to Los Angeles</strong><br>Fly with Virgin Australia</td>
+                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 120%; color: #232323;"><strong style="display: inline-block; line-height: 110%;">Return flights to Los Angeles</strong><br>Fly with Virgin Australia</td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                             <td style="text-align: right;" class="price-details">
                                                                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                                                                     <tr>
-                                                                        <td align="left" valign="middle" class="first-price" style="padding: 0px 15px 0px 15px; font-size: .75rem; text-align: left; line-height: 1.35rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$1278*</strong><br>Save $70</td>
-                                                                        <td align="left" valign="middle" style="padding: 0px 15px 0px 0; font-size: .75rem; text-align: left; line-height: 1.35rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$3378*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" class="first-price" style="padding: 0px 15px 0px 15px; font-size: .75rem; text-align: left; line-height: 170%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$1278*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" style="padding: 0px 15px 0px 0; font-size: .75rem; text-align: left; line-height: 170%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$3378*</strong><br>Save $70</td>
                                                                         <td align="right" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="margin-right: 15px; font-size: .85rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; background-color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">View</a></td>
                                                                     </tr>
                                                                 </table>
@@ -424,37 +433,37 @@
                                                                 <table cellpadding="10" cellspacing="0" style="width: 100%">
                                                                     <tr>
                                                                         <td align="left" valign="middle" width="40"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="38" height="38" alt="" /></td>
-                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 1.4rem; color: #232323;"><strong style="display: inline-block; line-height: 1.2rem;">Return flights to Los Angeles</strong><br>Fly with Virgin Australia</td>
+                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 120%; color: #232323;"><strong style="display: inline-block; line-height: 110%;">Return flights to Los Angeles</strong><br>Fly with Virgin Australia</td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                             <td style="text-align: right;" class="price-details">
                                                                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                                                                     <tr>
-                                                                        <td align="left" valign="middle" class="first-price" style="padding: 0px 15px 0px 15px; font-size: .75rem; text-align: left; line-height: 1.35rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$1278*</strong><br>Save $70</td>
-                                                                        <td align="left" valign="middle" style="padding: 0px 15px 0px 0; font-size: .75rem; text-align: left; line-height: 1.35rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$3378*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" class="first-price" style="padding: 0px 15px 0px 15px; font-size: .75rem; text-align: left; line-height: 170%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$1278*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" style="padding: 0px 15px 0px 0; font-size: .75rem; text-align: left; line-height: 170%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$3378*</strong><br>Save $70</td>
                                                                         <td align="right" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="margin-right: 15px; font-size: .85rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; background-color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">View</a></td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                    <!-- PRICE POINT -->
-                                                    <table border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="10" class="price-point responsive-table" width="100%" style="background-color: #ffffff; border: 1px #efefef solid; margin-bottom: 2px;" bgcolor="#ffffff;">
+                                                   <!-- PRICE POINT -->
+                                                   <table border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="10" class="price-point responsive-table" width="100%" style="background-color: #ffffff; border: 1px #efefef solid; margin-bottom: 2px;" bgcolor="#ffffff;">
                                                         <tr>
                                                             <td style="width: 55%;" class="flight-details">
                                                                 <table cellpadding="10" cellspacing="0" style="width: 100%">
                                                                     <tr>
                                                                         <td align="left" valign="middle" width="40"><img src="https://booking.auntbetty.com.au/content/common/images/tails/VA.png" width="38" height="38" alt="" /></td>
-                                                                        <td align="left" valign="middle" style="font-size: 16px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 1.4rem; color: #232323;"><strong style="display: inline-block; line-height: 1.2rem;">Return flights to Los Angeles</strong><br>Fly with Virgin Australia</td>
+                                                                        <td align="left" valign="middle" style="font-size: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; font-weight: normal; line-height: 120%; color: #232323;"><strong style="display: inline-block; line-height: 110%;">Return flights to Los Angeles</strong><br>Fly with Virgin Australia</td>
                                                                     </tr>
                                                                 </table>
                                                             </td>
                                                             <td style="text-align: right;" class="price-details">
                                                                 <table cellpadding="0" cellspacing="0" style="width: 100%">
                                                                     <tr>
-                                                                        <td align="left" valign="middle" class="first-price" style="padding: 0px 15px 0px 15px; font-size: .75rem; text-align: left; line-height: 1.35rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$1278*</strong><br>Save $70</td>
-                                                                        <td align="left" valign="middle" style="padding: 0px 15px 0px 0; font-size: .75rem; text-align: left; line-height: 1.35rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$3378*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" class="first-price" style="padding: 0px 15px 0px 15px; font-size: .75rem; text-align: left; line-height: 170%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Economy</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$1278*</strong><br>Save $70</td>
+                                                                        <td align="left" valign="middle" style="padding: 0px 15px 0px 0; font-size: .75rem; text-align: left; line-height: 170%; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color: #666666;"><span style="font-weight: 600;">Business</span><br><strong style="letter-spacing: -1px; font-size: 25px; font-weight: 600; color: #2083FE">$3378*</strong><br>Save $70</td>
                                                                         <td align="right" style="color: #2083fe;" bgcolor="#ffffff"><a href="#" target="_blank" style="margin-right: 15px; font-size: .85rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; background-color: #ffffff; text-decoration: none; color: #2083FE; text-decoration: none; border-radius: 3px; padding: 12px 20px; border: 1px solid #2083FE; display: inline-block;" class="mobile-button">View</a></td>
                                                                     </tr>
                                                                 </table>
@@ -480,7 +489,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td align="center">
-            <table width="100%" border="0" cellspacing="0" cellpadding="10" align="center" style="max-width: 800px;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="10" align="center" style="font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; max-width: 800px;">
                 <tr>
                     <td valign="top">
                         <h2 style="margin: 0; font-weight: 700; color: #F26132; font-size: 2.4rem; letter-spacing: -1px; line-height: 1rem;">70,000+</h2>
@@ -514,8 +523,8 @@
 <!-- BLOG POSTS -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="responsive-content">
     <tr>
-        <td align="center">
-            <table width="100%" border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="0" align="center" style="max-width: 800px; margin: 40px 0;">
+        <th align="center">
+            <table width="100%" border="0" bgcolor="#ffffff" cellspacing="0" cellpadding="0" align="center" style="font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; max-width: 800px; margin: 40px 0;">
                 <tr>
                     <th align="left" valign="middle" style="width: 240px; border-bottom: 1px #efefef solid;">
                         <a href="#"><img src="https://images.unsplash.com/photo-1512821231209-3cd3e4df62f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9crop=faces&fit=crop&h&auto=format&fit=&w=400&q=100" width="220" alt="" class="align-bottom" /></a>
@@ -534,7 +543,7 @@
                         <h5 style="margin: 0 0 8px 0; color:#232323; font-size: .85rem; font-weight: 400; line-height: 1.2rem; text-transform: uppercase;">Europe &bull; 2 min read</h5>
                         <a href="#" target="_blank" class="text-link" style="text-decoration: none; margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.2rem; color: #2083fe;">Discover Amsterdam, Netherlands in three days</a>
                         <p style="font-size: 1rem; margin-bottom: 0; font-weight: 400;">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-                    </tdh>
+                    </th>
                 </tr>
                 <tr>
                     <th align="left" valign="middle" style="width: 240px; border-bottom: 1px #efefef solid;">
@@ -547,7 +556,7 @@
                     </th>
                 </tr>
             </table>
-        </td>
+        </th>
     </tr>
 </table>
 
@@ -555,10 +564,10 @@
 <!-- WHY BOOK WITH US -->
 <table border="0" bgcolor="#ffffff" cellpadding="0" cellspacing="0" width="100%" style="border-top: 1px #efefef solid; border-bottom: 1px #efefef solid;">
     <tr>
-        <td align="center">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0 " align="center" style="max-width: 780px;" class="why-book">
+        <th align="center">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width: 780px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif;" class="why-book">
                 <tr>
-                    <td align="left" style="padding-left: 10px; font-size: 1rem; line-height: 25px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif;">
+                    <th align="left" style="padding-left: 10px; font-size: 1rem; line-height: 25px;">
                         <h2 style="padding-top: 10px; font-weight: 560; color: #F26132; font-size: 20px;">Why book with Aunt Betty</h2>
                         <ul style="list-style-type: none; padding: 0 0 10px 5px;">
                             <li><span>&#x2714;&nbsp;</span>Great prices from all major airlines</li>
@@ -566,19 +575,19 @@
                             <li><span>&#x2714;&nbsp;</span>Dedicated 24 / 7 customer support team</li>
                             <li><span>&#x2714;&nbsp;</span>A part of Flight Centre Travel Group</li>
                         </ul>
-                    </td>
-                    <td align="right" valign="bottom">
-                        <img src="https://rawcdn.githack.com/zakrowling/campaign/59e021084258feacff17eb995fa039f4b7cce74f/ab-avatar.png" class="avatar mobile-hide" alt="" style="width: 150px; padding: 10px 60px 0 0; vertical-align: bottom" />
-                    </td>
+                    </th>
+                    <th align="right" valign="bottom">
+                        <img src="https://rawcdn.githack.com/zakrowling/campaign/59e021084258feacff17eb995fa039f4b7cce74f/ab-avatar.png" class="avatar mobile-hide" alt="" style="width: 150px; max-width: 150px; padding: 10px 60px 0 0; vertical-align: bottom" />
+                    </th>
                 </tr>
             </table>
-        </td>
+        </th>
     </tr>
 </table>
 
 
 <!-- HOTELS -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px; margin: 20px auto 0 auto;" class="hero-banner padding">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px; margin: 20px auto 0 auto; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif;" class="hero-banner padding">
         <tr>
             <td align="center" style="padding: 20px 20px; background-size: cover; background-position: center center; background-color: #F26132; background-image: url(https://rawcdn.githack.com/zakrowling/campaign/daf3c50ca01cef3c34ee050dad48c108599cc721/hotel-background.png);">
                 <table border="0" cellpadding="0" cellspacing="0" style="color: #ffffff;">
@@ -602,18 +611,18 @@
     </table>
 
 <!-- FOOTER -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#F9F9F9">
     <tr>
         <td align="center" style="padding: 15px 0;">
-            <table width="100%" border="0" cellspacing="0" cellpadding="10" align="center" style="max-width: 800px;" class="responsive-table">
+            <table width="100%" border="0" cellspacing="0" cellpadding="10" align="center" style="max-width: 800px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif;" class="responsive-table">
                 <tr>
-                    <td align="left" style="width: 60%; text-align: left; font-size: .85rem; line-height: 1rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color:#666666;">
+                    <td align="left" style="width: 60%; text-align: left; font-size: .85rem; line-height: 1rem; color:#666666;">
                         <p>&copy; Flight Centre Travel Group Limited trading as Aunt Betty&nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="#" style="color: #2083fe;">Contact&nbsp;us</a><br>
                         ABN&nbsp;25&nbsp;003&nbsp;377&nbsp;188 - ACN&nbsp;003&nbsp;377&nbsp;188 ATAS&nbsp;-&nbsp;Travel&nbsp;Accredited&nbsp;No.&nbsp;A10412</p>
                         <p><a href="http://litmus.com" target="_blank" style="color: #666666;">Unsubscribe</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
                         <a href="http://litmus.com" target="_blank" style="color: #666666;">Update Preferences</a></p>
                     </td>
-                    <td align="right" style="width: 40%; font-size: .9rem; line-height: 1.5rem; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif; color:#666666;">
+                    <td align="right" style="width: 40%; font-size: .9rem; line-height: 1.5rem; color:#666666;">
                         <div style="text-align: right">
                             <a href="https://www.facebook.com/Aunt-Betty-160977227584593/" target="_blank"><img src="https://rawcdn.githack.com/zakrowling/campaign/3e89b43ed1bc760b30a13427f35ace189c0dd6e7/fb.png" style="padding: 0 7px; height: 25px !important" height="25" alt="FB" title="Like us on Facebook" /></a>
                             <a href="https://instagram.com/aunt_betty_travel" target="_blank"><img src="https://rawcdn.githack.com/zakrowling/campaign/3e89b43ed1bc760b30a13427f35ace189c0dd6e7/ig.png" style="padding: 0 7px; height: 25px !important" height="25" alt="IG" title="Follow us on Instagram" /></a>
@@ -626,7 +635,7 @@
                     </td>
                 </tr>
             </table>
-            <table width="100%" border="0" cellspacing="0" cellpadding="10" align="center" style="max-width: 800px;" class="responsive-table">
+            <table width="100%" border="0" cellspacing="0" cellpadding="10" align="center" style="max-width: 800px; font-family: 'Source Sans Pro', 'Trebuchet MS', Optima, sans-serif;" class="responsive-table">
                 <tr>
                     <td width="100%">
                         <div style="font-size: 11px;">Aunt Betty terms & conditions apply. Airlines reserve the right to change rates and conditions without prior notice. Flights subject to availability.<br>* Fares indicative of from price in AUD, return, per person, correct as of the time of sending the email. Saving amount based on the sale price of the fare.</div>
